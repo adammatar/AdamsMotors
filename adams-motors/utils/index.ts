@@ -1,14 +1,19 @@
 import { CarProps, FilterProps } from "@/types";
 import { carImageMap } from "@/constants";
 
+import dotenv from 'dotenv';
+dotenv.config();
 
+// Now you can access the key as an environment variable
+const apiKey = process.env.X_RAPIDAPI_KEY;
+
+console.log(apiKey);
 
 export async function getCars(filters: FilterProps) {
   const { make, model, fuel, year, limit } = filters;
-   const headers = {
-		'X-RapidAPI-Key': 'ae503d35a5msh4fb7934761bc5aap1f302cjsn8a44db2b77f5',
-		'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
-	}
+  const headers = new Headers();
+  headers.append('X-RapidAPI-Key', apiKey || '');
+  headers.append('X-RapidAPI-Host', 'cars-by-api-ninjas.p.rapidapi.com');
 
   const response = await fetch(
     `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${make}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`,
