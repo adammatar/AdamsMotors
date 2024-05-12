@@ -30,12 +30,12 @@ const SearchManufacturer = ({
         );
 
   return (
-    <div className="search-manufacturer">
+    <div className="search-manufacturer z-0">
       <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className="relative w-full">
           <ComboboxButton className="absolute top-[14px]">
             <Image
-              src="/car-logo.svg"
+              src="/select-car.svg"
               width={20}
               height={20}
               alt="car-logo"

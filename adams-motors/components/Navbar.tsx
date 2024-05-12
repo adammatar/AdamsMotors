@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import CustomButton from './CustomButton';
+import Login from './Login';
 
 const Navbar = () => {
   return (
@@ -11,11 +12,7 @@ const Navbar = () => {
       <Link href="/" className="flex justify-center items-center">
         <Image src="/logo.svg" alt="Adams Motors Logo" width={210} height={18} className='object-contain' />
         </Link>
-        <CustomButton
-        title="Sign In"
-        btnType="button"
-        containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
-        />
+        <Login />
       </nav>
       </header>
   )
