@@ -21,19 +21,19 @@ export default async function Home({ searchParams }) {
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold">
-            Car Catalogue
+            Cars list
           </h1>
           <p className= "text-gray-500">
-            Discover the best cars from the top manufacturers
+             Rent the Best, Drive the Best
             </p>
           </div>
           <div className="home__filters">
-            <SearchBar />
-            <div className="home__filter-container -z-0">
-              <CustomFilter title="fuel" options={fuels}/>
-              <CustomFilter title="year" options={yearsOfProduction}/>
-            </div>
+          <SearchBar />
           </div>
+          <div className="home__filter-container -z-0">
+            <CustomFilter title="fuel" options={fuels}/>
+            <CustomFilter title="year" options={yearsOfProduction}/>
+            </div>
           {!isDataEmpty ? (
             <section>
               <div className="home__cars-wrapper">

@@ -8,12 +8,13 @@ import { useRouter } from 'next/navigation'
 
 const SearchButton = ({ otherClasses }: { otherClasses : string }) => {
   return (
-    <button type="submit" className={`-ml-3 z-2 ${otherClasses}`}>
+    <button type="submit" className={`-ml-3 z-2 hover:animate-pulse active:animate-ping ${otherClasses}`}>
       <Image src="/magnifying-glass.svg"
       alt="maginfying glass"
       width={40}
       height={40}
       className="object-contain"
+
       />
     </button>
   )

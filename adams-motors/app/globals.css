@@ -58,28 +58,7 @@
 
 /* END: Welcome Header styles */
 
-/* START: Home styles */
 
-.home__text-container {
-  @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100;
-}
-
-.home__filters {
-  @apply mt-12 w-full flex-between items-center flex-wrap gap-5;
-}
-
-.home__filter-container {
-  @apply flex justify-start flex-wrap items-center gap-2;
-}
-
-.home__cars-wrapper {
-  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
-}
-
-.home__error-container {
-  @apply mt-16 flex justify-center items-center flex-col gap-2;
-}
-/* END: Home styles */
 
 /* START: Car Card styles */
 .car-card {
@@ -88,10 +67,6 @@
 
 .car-card__content {
   @apply w-full flex justify-between items-start gap-2;
-}
-
-.car-card__content-title {
-  @apply text-[22px] leading-[26px] font-bold capitalize;
 }
 
 .car-card__price {
@@ -181,17 +156,40 @@
 }
 /* END: Footer styles */
 
+/* START: Home styles */
+
+.home__text-container {
+  @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100;
+}
+
+.home__filters {
+  @apply mt-1 w-full flex-between items-center flex-wrap gap-5;
+}
+
+.home__filter-container {
+  @apply flex justify-start flex-wrap items-center gap-2 mt-3 ;
+}
+
+.home__cars-wrapper {
+  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
+}
+
+.home__error-container {
+  @apply mt-16 flex justify-center items-center flex-col gap-2;
+}
+/* END: Home styles */
+
 /* START: searchbar styles */
 .searchbar {
   @apply flex items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 max-w-3xl;
 }
 
 .searchbar__item {
-  @apply flex-1 max-sm:w-full flex justify-start items-center relative;
+  @apply flex-1 max-sm:w-full flex justify-start items-center relative bg-slate-200 mr-5 rounded-md shadow-sm;
 }
 
 .searchbar__input {
-  @apply w-full h-[48px] pl-12 p-4 bg-light-white rounded-r-full max-sm:rounded-full outline-none cursor-pointer text-sm;
+  @apply w-full h-[48px] pl-12 p-4 bg-light-white max-sm:rounded-full outline-none cursor-pointer text-sm rounded-md;
 }
 /* END: searchbar styles */
 
@@ -201,7 +199,7 @@
 }
 
 .search-manufacturer__input {
-  @apply w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-light-white outline-none cursor-pointer text-sm;
+  @apply w-full h-[48px] pl-12 p-4  max-sm:rounded-full bg-light-white outline-none cursor-pointer text-sm rounded-md;
 }
 
 .search-manufacturer__options {
@@ -218,7 +216,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #00000099;
+  background: #ffffffec;
   z-index: 1000;
 }
 

@@ -25,9 +25,9 @@ const CustomFilter = ({title , options}:CustomFilterProps) => {
           handleUpdateParams(e)
         }}
         >
-          <div className="relative w-fit z-10">
+          <div className="relative w-fit z-1">
             <ListboxButton className="custom-filter__btn">
-              <span className="block turncate text-gray-500">{selected.title}</span>
+              <span className="block turncate text-gray-900">{selected.title}</span>
               <Image src="/chevron-up-down.svg" width={20} height={20} alt="chevron up and down" className="ml-4 object-contain" />
             </ListboxButton>
             <Transition

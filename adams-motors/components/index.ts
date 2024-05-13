@@ -11,7 +11,7 @@ import ShowMore from './ShowMore';
 import Login from './Login';
 import Modal from './Modal';
 import ScrollToTop from './ScrollToTop';
-
+import GetCode from './GetCode';
 export {
   WelcomeHeader,
   CustomButton,
@@ -25,5 +25,6 @@ export {
   ShowMore,
   Login,
   Modal,
-  ScrollToTop
+  ScrollToTop,
+  GetCode
 }

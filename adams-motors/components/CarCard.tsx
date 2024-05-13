@@ -22,16 +22,17 @@ const CarCard = ({ car }: CarCardProps) => {
   return (
     <div className='car-card group'>
       <div className="car-card__content">
-        <h2 className="car-card__content-title">
-          {make} {model}
+        <h2 className="flex justify-between w-full">
+        <span className="text-left text-[24px] leading-[26px] font-bold capitalize">{make}</span>
+        <span className="text-[16px] leading-[22px] font-semibold capitalize text-right">{model}</span>
         </h2>
       </div>
-      <p className="flex mt-6 text-[32px] font-extrabold">
+      <p className="flex mt-2 text-[32px] font-extrabold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-red-700 duration-300 ">
         <span className="self-start text-[14px] font-semibold">
           $
         </span>
         {carRent.toFixed(0)}
-        <span className="self-end text-[14px] font-medium">
+        <span className="self-end text-[14px] font-medium ">
         /Day
         </span>
       </p>
@@ -60,7 +61,7 @@ const CarCard = ({ car }: CarCardProps) => {
         </div>
 
         <div className="car-card__btn-container">
-        <CustomButton title="Rent Now" containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
+        <CustomButton title="More Information" containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
         textStyles="text-white text-[14px] leading-[17px] font-bold"
         icon="/right-arrow.svg"
         iconPlace="right"

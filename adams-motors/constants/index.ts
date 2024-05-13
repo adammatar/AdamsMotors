@@ -40,6 +40,7 @@ export const manufacturers = [
   "Toyota",
   "Volkswagen",
   "Volvo",
+  "Genesis"
 ];
 
 export const yearsOfProduction = [
@@ -75,10 +76,10 @@ export const carImageMap: { [key: string]: string } = {
   Audi: "/cars/audi.png",
   BMW: "/cars/bmw.png",
   Ford: "/cars/ford.jpg",
-  Chevrolet: "/cars/chevrolet.jpg",
-  Honda: "/cars/honda.jpg",
+  Chevrolet: "/cars/chevrolet.png",
+  Honda: "/cars/honda.png",
   Hyundai: "/cars/hyundai.webp",
-  Kia: "/cars/kia.jpg",
+  Kia: "/cars/kia.webp",
   "Mercedes-Benz": "/cars/mercedes.webp",
   Nissan: "/cars/nissan.jpg",
   Toyota: "/cars/toyota.png",
@@ -90,16 +91,16 @@ export const carImageMap: { [key: string]: string } = {
   Ram: "/cars/ram.jpeg",
   Porsche: "/cars/porsche.png",
   Mitsubishi: "/cars/mitsubishi.webp",
-  MINI: "/cars/mini.jpeg",
+  MINI: "/cars/mini.png",
   McLaren: "/cars/mclaren.jpg",
   Mazda: "/cars/mazda.jpg",
   Maserati: "/cars/maserati.jpg",
   Lincoln: "/cars/lincoln.jpeg",
   Lexus: "/cars/lexus.jpg",
-  "Land Rover": "/cars/land-rover.jpg",
+  "Land Rover": "/cars/landrover.webp",
   Lamborghini: "/cars/lamborghini.jpg",
   Jeep: "/cars/jeep.jpg",
-  Jaguar: "/cars/jaguar.jpg",
+  Jaguar: "/cars/jaguar.webp",
   Infiniti: "/cars/infiniti.jpg",
   GMC: "/cars/gmc.jpg",
   Fiat: "/cars/fiat.webp",
@@ -113,6 +114,7 @@ export const carImageMap: { [key: string]: string } = {
   "Aston Martin": "/cars/aston-martin.jpeg",
   Bentley: "/cars/bentley.png",
   Buick: "/cars/buick.avif",
+  Genesis: "/cars/genesis.png",
 };
 
 
