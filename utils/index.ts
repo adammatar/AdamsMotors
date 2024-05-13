@@ -4,8 +4,6 @@ import { carImageMap } from "@/constants";
 // Now you can access the key as an environment variable
 const apiKey = process.env.X_RapidAPI_Key;
 
-console.log('MyAPI::' ,apiKey);
-
 export async function getCars(filters: FilterProps) {
   const { make, model, fuel, year, limit } = filters;
   const headers = new Headers();
