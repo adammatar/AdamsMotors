@@ -1,11 +1,8 @@
 import { CarProps, FilterProps } from "@/types";
 import { carImageMap } from "@/constants";
 
-import dotenv from 'dotenv';
-dotenv.config();
-
 // Now you can access the key as an environment variable
-const apiKey = process.env.X_RAPIDAPI_KEY;
+const apiKey = process.env.X_RapidAPI_Key;
 
 console.log(apiKey);
 
