@@ -185,7 +185,7 @@
 }
 
 .searchbar__item {
-  @apply flex-1 max-sm:w-full flex justify-start items-center relative bg-slate-200 mr-5 rounded-md shadow-sm;
+  @apply flex-1 max-sm:w-full flex justify-start items-center relative mr-5 rounded-md shadow-sm;
 }
 
 .searchbar__input {
