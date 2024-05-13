@@ -1,14 +1,15 @@
 import { CarCard, CustomFilter, WelcomeHeader, SearchBar, ShowMore, ScrollToTop} from "@/components";
 import { fuels, yearsOfProduction } from "@/constants";
+import { searchParamsProps } from "@/types";
 import { getCars } from "@/utils";
 import Image from "next/image";
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }: { searchParams: searchParamsProps }) {
   const allCars = await getCars({
     make: searchParams.manufacturer || '',
     model: searchParams.model || '',
     fuel: searchParams.fuel || '',
-    year: searchParams.year || '2023',
+    year: searchParams.year || 2023,
     limit: searchParams.limit || 9,
    });
 
