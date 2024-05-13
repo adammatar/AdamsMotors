@@ -1,3 +1,4 @@
+![Logo](https://raw.githubusercontent.com/adammatar/AdamsMotors/dbb9cc49872597fae874d992adce29bdf549a8f4/adams-motors/public/logo.svg)
 # Adam's Motors
 
 Welcome to Adam's Motors, a car rental application developed using Next.js, React.js, and TypeScript. This app allows users to explore various car models and easily rent vehicles.
