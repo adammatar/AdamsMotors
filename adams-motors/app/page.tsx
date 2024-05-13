@@ -1,4 +1,4 @@
-import { CarCard, CustomFilter, WelcomeHeader, SearchBar, ShowMore, ScrollToTop } from "@/components";
+import { CarCard, CustomFilter, WelcomeHeader, SearchBar, ShowMore, ScrollToTop} from "@/components";
 import { fuels, yearsOfProduction } from "@/constants";
 import { getCars } from "@/utils";
 import Image from "next/image";
@@ -9,7 +9,7 @@ export default async function Home({ searchParams }) {
     model: searchParams.model || '',
     fuel: searchParams.fuel || '',
     year: searchParams.year || '2023',
-    limit: searchParams.limit || 10,
+    limit: searchParams.limit || 9,
    });
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars ;
@@ -29,11 +29,12 @@ export default async function Home({ searchParams }) {
           </div>
           <div className="home__filters">
           <SearchBar />
-          </div>
-          <div className="home__filter-container -z-0">
+          <div className="home__filter-container z-2">
             <CustomFilter title="fuel" options={fuels}/>
             <CustomFilter title="year" options={yearsOfProduction}/>
             </div>
+          </div>
+
           {!isDataEmpty ? (
             <section>
               <div className="home__cars-wrapper">
@@ -41,7 +42,7 @@ export default async function Home({ searchParams }) {
                   <CarCard key={index} car={car}/>
                 ))}
               </div>
-              <ShowMore pageNumber={(searchParams.limit || 10) /10} isNext={(searchParams.limit || 10) > allCars.length}/>
+              <ShowMore pageNumber={(searchParams.limit || 9) /10} isNext={(searchParams.limit || 9) > allCars.length}/>
             </section>
           ) : (
             <div>

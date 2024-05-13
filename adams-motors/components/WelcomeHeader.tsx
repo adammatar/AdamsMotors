@@ -26,11 +26,11 @@ const WelcomeHeader = () => {
         <div className="items-center lg:flex">
             <div className="w-full lg:w-1/2">
                 <div className="welcome-header__titles-container lg:max-w-lg">
-                    <h1 className="welcome-header__title">Welcome to Adam's Motors</h1>
+                    <h1 className="welcome-header__title">WELCOME TO <br /> ADAM'S MOTORS</h1>
                     <p className="welcome-header__subtitle"> Streamline your car rental experience with our effortless ReactJs web app</p>
                     <CustomButton
                       title="Explore Cars"
-                      containerStyles="w-full py-[14px] px-5  mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-blue-600 rounded-lg lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+                      containerStyles="w-full py-[14px] px-5  mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded-lg lg:w-auto hover:bg-red-600 focus:outline-none focus:bg-blue-500"
                       handleClick={handleScroll}
                       icon="/right-arrow.svg"
                       iconPlace="right"
@@ -43,7 +43,6 @@ const WelcomeHeader = () => {
             </div>
         </div>
     </div>
-    {/* <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" /> */}
     </>
   );
 }

@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { CarDetailsProps } from '@/types'
 import { Dialog , DialogPanel, Transition, TransitionChild } from '@headlessui/react';
 import { getCarImageUrl } from '@/utils';
+import CustomButton from './CustomButton';
+import Link from 'next/link';
 
 const CarDetails = ({ isOpen , closeModal , car}: CarDetailsProps) => {
   return (
@@ -39,29 +41,30 @@ const CarDetails = ({ isOpen , closeModal , car}: CarDetailsProps) => {
           ">
             <button type="button"
             onClick={closeModal}
-            className="absolute top-4 right-4 z-10 w-fit p-2 bg-primary-blue-100 rounded-full"
+            className="absolute -top-1 right-1 z-10 w-fit p-2  rounded-full"
             >
               <Image src="/close.svg" alt="close" width={20} height={20} className="object-contain"/>
             </button>
 
-            <div className="flex-1 flex flex-col gap-3">
-                <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
+            <div className="flex-1 flex flex-col gap-2 ">
+            <h2 className="flex text-xl capitalize flex-between">
+                <span className="font-extrabold text-left">{car.make}</span> <span className="font-semibold text-right">{car.model}</span>
+              </h2>
+                <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-md">
                   <Image src={getCarImageUrl(car)} alt="car model" fill priority className="object-contain" />
                 </div>
             </div>
             <div className="flex-1 flex flex-col gap-2">
-              <h2 className="font-semibold text-xl capitalize">
-                {car.make} {car.model}
-              </h2>
-              <div className="mt-3 flex flex-wrap gap-4">
+              <div className="mt-1 flex flex-wrap gap-1 divide-y divide-gray-200">
                   {Object.entries(car).map(([key,value]) => (
-                    <div key={key} className="flex justify-between gap-5 w-full text-right">
+                    <div key={key} className="flex justify-between gap-1 w-full text-right">
                      <h4 className="text-grey capitalize">{key.split("_").join(" ")}</h4>
                      <p className="text-black-100 font-semibold">{value}</p>
                     </div>
                   ))}
               </div>
             </div>
+            <CustomButton title="Rent Now" containerStyles="w-full py-[16px] rounded-md bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 transition hover:duration-300 duration-300 ease-in-out" />
           </DialogPanel>
         </TransitionChild>
           </div>

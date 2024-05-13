@@ -57,7 +57,7 @@ const Login = () => {
         <CustomButton
         title="Sign In"
         btnType="button"
-        containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
+        containerStyles="text-white rounded-full bg-gray-800 min-w-[130px] hover:scale-105 transform transition duration-300 ease-in-out"
         handleClick={toggleModal}
         />
     </>

@@ -25,10 +25,12 @@ module.exports = {
         grey: "#747A88",
       },
       backgroundImage: {
-        'pattern': "url('/pattern.png')",
+        'pattern': "url('/9.jpg')",
         'hero-bg': "url('/hero-bg.png')"
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 };
